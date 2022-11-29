@@ -1,6 +1,6 @@
-const path = require('path')
+const path = require('path');
 
-const resolve = (dir) => path.resolve(__dirname, dir)
+const resolve = (dir) => path.resolve(__dirname, dir);
 
 module.exports = {
   webpack: {
@@ -8,4 +8,4 @@ module.exports = {
       '@': resolve('src')
     }
   }
-}
+};
