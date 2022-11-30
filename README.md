@@ -41,3 +41,7 @@ npm install craco-less@2.1.0-alpha.0
 ## 安装 ant-design
 
 npm install antd@4.24.4
+
+## 配置路由
+
+npm install react-router-dom
