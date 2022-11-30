@@ -29,3 +29,15 @@ extends: [
 
 'plugin:prettier/recommended'
 ],
+
+## 重置 css 样式
+
+npm install normalize.css
+
+## 配置 less
+
+npm install craco-less@2.1.0-alpha.0
+
+## 安装 ant-design
+
+npm install antd@4.24.4
