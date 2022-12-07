@@ -45,3 +45,14 @@ npm install antd@4.24.4
 ## 配置路由
 
 npm install react-router-dom
+
+## snippet generator
+
+在这个地方配置快速生成文件的模板
+https://snippet-generator.app/
+
+tsreact
+
+## redux
+
+npm install @reduxjs/toolkit react-redux
