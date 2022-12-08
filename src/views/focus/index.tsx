@@ -1,12 +1,12 @@
-import React, { memo } from 'react';
-import type { FC, ReactNode } from 'react';
+import React, { memo } from 'react'
+import type { FC, ReactNode } from 'react'
 
-interface Iprops {
-  children?: ReactNode;
+interface IProps {
+  children?: ReactNode
 }
 
-const Focus: FC<Iprops> = () => {
-  return <div>Focus</div>;
-};
+const Focus: FC<IProps> = () => {
+  return <div>Focus</div>
+}
 
-export default memo(Focus);
+export default memo(Focus)

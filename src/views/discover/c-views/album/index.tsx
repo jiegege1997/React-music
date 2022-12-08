@@ -5,8 +5,8 @@ interface IProps {
   children?: ReactNode
 }
 
-const Mine: FC<IProps> = () => {
-  return <div>Mine</div>
+const Album: FC<IProps> = () => {
+  return <div>Album</div>
 }
 
-export default memo(Mine)
+export default memo(Album)
