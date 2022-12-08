@@ -56,3 +56,7 @@ tsreact
 ## redux
 
 npm install @reduxjs/toolkit react-redux
+
+## axios
+
+npm install axios
