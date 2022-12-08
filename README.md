@@ -18,16 +18,17 @@ npx eslint --init
 
 ## eslint 和 prettier 风格一致
 
-npm install eslint-plugin-prettier eslint-config-prettier -D
-eslintrc.js 中
-extends: [
-'eslint:recommended',
-'plugin:react/recommended',
+npm install eslint-plugin-prettier  
+eslint-config-prettier -D  
+eslintrc.js 中  
+extends: [  
+'eslint:recommended',  
+'plugin:react/recommended',  
 'plugin:@typescript-eslint/recommended',
 
 <!-- eslint 检测时同时检测 prettier -->
 
-'plugin:prettier/recommended'
+'plugin:prettier/recommended'  
 ],
 
 ## 重置 css 样式
@@ -63,4 +64,5 @@ npm install axios
 
 ## styled-components
 
-npm install styled-components -D
+npm install styled-components -D  
+需要写 ts 的类型说明
