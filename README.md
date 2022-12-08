@@ -60,3 +60,7 @@ npm install @reduxjs/toolkit react-redux
 ## axios
 
 npm install axios
+
+## styled-components
+
+npm install styled-components -D
