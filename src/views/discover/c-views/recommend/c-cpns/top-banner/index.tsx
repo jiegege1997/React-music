@@ -41,7 +41,6 @@ const TopBanner: FC<IProps> = () => {
   let bgImageUrl
   if (currentIndex >= 0 && banners.length > 0) {
     bgImageUrl = banners[currentIndex].imageUrl + '?imageView&blur=40x20'
-    console.log(currentIndex, bgImageUrl)
   }
 
   return (

@@ -2,6 +2,11 @@ import React, { lazy } from 'react'
 import { Navigate } from 'react-router-dom'
 import type { RouteObject } from 'react-router-dom'
 
+// import Discover from '@/views/discover'
+// import Mine from '@/views/mine'
+// import Focus from '@/views/focus'
+// import Download from '@/views/download'
+
 const Discover = lazy(() => import('@/views/discover'))
 const Recommend = lazy(() => import('@/views/discover/c-views/recommend'))
 const Ranking = lazy(() => import('@/views/discover/c-views/ranking'))

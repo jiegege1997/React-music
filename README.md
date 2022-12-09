@@ -66,3 +66,12 @@ npm install axios
 
 npm install styled-components -D  
 需要写 ts 的类型说明
+
+1. typescript 内置 DOM
+2. 第三方
+
+- 库内部已经有类型声明(axios)
+- react/react-dom => @types/react @types/reactd-dom
+- 自己写类型声明 lodash
+
+npm i @types/styled-components -D
