@@ -40,6 +40,9 @@ export const BarControl = styled.div<IBarControl>`
 
   .prev {
     background-position: 0 -130px;
+    &:hover {
+      background-position: -30px -130px;
+    }
   }
 
   .play {
@@ -51,8 +54,13 @@ export const BarControl = styled.div<IBarControl>`
 
   .next {
     background-position: -80px -130px;
+    &:hover {
+      background-position: -110px -130px;
+    }
   }
 `
+
+// 播放条
 export const BarPlayerInfo = styled.div`
   display: flex;
   width: 642px;
@@ -125,6 +133,7 @@ export const BarPlayerInfo = styled.div`
 interface IBarOperator {
   playMode: number
 }
+// 右边操作栏
 export const BarOperator = styled.div<IBarOperator>`
   display: flex;
   align-items: center;
@@ -134,6 +143,7 @@ export const BarOperator = styled.div<IBarOperator>`
   .btn {
     width: 25px;
     height: 25px;
+    cursor: pointer;
   }
 
   .left {
@@ -147,10 +157,16 @@ export const BarOperator = styled.div<IBarOperator>`
 
   .favor {
     background-position: -88px -163px;
+    &:hover {
+      background-position: -88px -189px;
+    }
   }
 
   .share {
     background-position: -114px -163px;
+    &:hover {
+      background-position: -114px -189px;
+    }
   }
 
   .right {
@@ -162,6 +178,9 @@ export const BarOperator = styled.div<IBarOperator>`
 
     .volume {
       background-position: -2px -248px;
+      &:hover {
+        background-position: -32px -248px;
+      }
     }
 
     .loop {

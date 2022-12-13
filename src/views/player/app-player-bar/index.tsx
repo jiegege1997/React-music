@@ -153,6 +153,7 @@ const AppPlayerBar: FC<IProps> = () => {
   return (
     <PlayerBarWrapper className="sprite_playbar">
       <div className="content wrap-v2">
+        {/* 左边操作栏 */}
         <BarControl isPlaying={isPlaying}>
           <button
             className="btn sprite_playbar prev"
@@ -167,6 +168,7 @@ const AppPlayerBar: FC<IProps> = () => {
             onClick={() => handleChangeMusic()}
           ></button>
         </BarControl>
+        {/* 播放条 */}
         <BarPlayerInfo>
           <Link to="/player">
             <img
@@ -197,11 +199,12 @@ const AppPlayerBar: FC<IProps> = () => {
             </div>
           </div>
         </BarPlayerInfo>
+        {/* 右边操作栏 */}
         <BarOperator playMode={playMode}>
           <div className="left">
-            <button className="btn pip"></button>
-            <button className="btn sprite_playbar favor"></button>
-            <button className="btn sprite_playbar share"></button>
+            <a className="btn pip" title="画中画歌词"></a>
+            <a className="btn sprite_playbar favor" title="收藏"></a>
+            <a className="btn sprite_playbar share" title="分享"></a>
           </div>
           <div className="right sprite_playbar">
             <button className="btn sprite_playbar volume"></button>
