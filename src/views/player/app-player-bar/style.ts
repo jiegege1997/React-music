@@ -179,7 +179,7 @@ export const BarOperator = styled.div<IBarOperator>`
     .volume {
       background-position: -2px -248px;
       &:hover {
-        background-position: -32px -248px;
+        background-position: -31px -248px;
       }
     }
 

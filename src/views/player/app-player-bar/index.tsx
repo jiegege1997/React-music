@@ -16,6 +16,7 @@ import {
   changeMusicAction,
   changePlayModeAction
 } from '../store/player'
+import AppPlayerPanel from '../app-player-panel'
 
 interface IProps {
   children?: ReactNode
@@ -29,17 +30,20 @@ const AppPlayerBar: FC<IProps> = () => {
   const [currentTime, setCurrentTime] = useState(0)
   const [isSliding, setIsSliding] = useState(false)
   const audioRef = useRef<HTMLAudioElement>(null)
+  const [showPanel, setShowPanel] = useState(false)
 
   /** 从redux中获取数据 */
-  const { currentSong, lyrics, lyricIndex, playMode } = useAppSelector(
-    (state) => ({
-      currentSong: state.player.currentSong,
-      lyrics: state.player.lyrics,
-      lyricIndex: state.player.lyricIndex,
-      playMode: state.player.playMode
-    }),
-    shallowEqualApp
-  )
+  const { currentSong, lyrics, lyricIndex, playMode, playSongList } =
+    useAppSelector(
+      (state) => ({
+        currentSong: state.player.currentSong,
+        lyrics: state.player.lyrics,
+        lyricIndex: state.player.lyricIndex,
+        playMode: state.player.playMode,
+        playSongList: state.player.playSongList
+      }),
+      shallowEqualApp
+    )
   const dispatch = useAppDispatch()
 
   /** 组件内的副作用操作 */
@@ -212,7 +216,12 @@ const AppPlayerBar: FC<IProps> = () => {
               className="btn sprite_playbar loop"
               onClick={handleChangePlayMode}
             ></button>
-            <button className="btn sprite_playbar playlist"></button>
+            <button
+              className="btn sprite_playbar playlist"
+              onClick={() => setShowPanel(!showPanel)}
+            >
+              {playSongList.length}
+            </button>
           </div>
         </BarOperator>
       </div>
@@ -221,6 +230,7 @@ const AppPlayerBar: FC<IProps> = () => {
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleTimeEnded}
       />
+      {showPanel && <AppPlayerPanel />}
     </PlayerBarWrapper>
   )
 }
